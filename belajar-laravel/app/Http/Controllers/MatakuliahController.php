@@ -34,7 +34,7 @@ class MatakuliahController extends Controller
      */
     public function show(string $id = null)
     {
-            return "Anda mengakses matakuliah ".$id;
+            return "yahhhh ".$id;
     }
 
     /**
