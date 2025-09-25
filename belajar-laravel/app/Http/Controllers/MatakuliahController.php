@@ -58,6 +58,6 @@ class MatakuliahController extends Controller
      */
     public function destroy(string $id)
     {
-        return "Menghapus data matakuliah dari penyimpanan dengan ID : ".$id;
+        return "testinggggg ".$id;
     }
 }
