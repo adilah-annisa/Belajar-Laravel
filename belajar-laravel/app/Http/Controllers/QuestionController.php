@@ -11,7 +11,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
+      //
     }
 
     /**
@@ -27,7 +27,23 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $request-> validate ([
+            'nama' => 'required|max:10|min:5',
+            'email' => ['required','email'],
+            'pertanyaan' => 'required|max:300|min:10',
+
+        ],[
+            'nama.required' => 'Nama tidak boleh kosong',
+            'email.email' => 'Email tidak valid',
+            'pertanyaan.required' => 'Isi dong pertanyaannya!',
+            'pertanyaan.min' => 'Pertanyaan minimal harus 10 karakter'
+        ]);
+
+        $data['nama']       = $request->nama;
+        $data['email']       = $request->email;
+        $data['pertanyaan']       = $request->pertanyaan;
+
+        return view('home-question-respon', $data);
     }
 
     /**
