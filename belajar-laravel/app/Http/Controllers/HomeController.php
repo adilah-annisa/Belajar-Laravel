@@ -1,17 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 
-
-class MatakuliahController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return "Menampilkan data Matakuliah";
+        //
     }
 
     /**
@@ -19,7 +19,7 @@ class MatakuliahController extends Controller
      */
     public function create()
     {
-        return "Menampilkan form untuk membuat data matakuliah baru";
+        //
     }
 
     /**
@@ -27,15 +27,15 @@ class MatakuliahController extends Controller
      */
     public function store(Request $request)
     {
-        return "Menyimpan data matakuliah yang baru dibuat dalam penyimpanan";
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id = null)
+    public function show(string $id)
     {
-            return "yahhhh ".$id;
+        //
     }
 
     /**
@@ -43,7 +43,7 @@ class MatakuliahController extends Controller
      */
     public function edit(string $id)
     {
-        return "Menampilkan form untuk mengubah data matakuliah tertentu dengan ID : ".$id;
+        //
     }
 
     /**
@@ -51,7 +51,7 @@ class MatakuliahController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        return "Menyimpan perubahan data matakuliah dengan ID : ".$id;
+        //
     }
 
     /**
@@ -59,6 +59,6 @@ class MatakuliahController extends Controller
      */
     public function destroy(string $id)
     {
-        return "testinggggg ".$id;
+        //
     }
 }
