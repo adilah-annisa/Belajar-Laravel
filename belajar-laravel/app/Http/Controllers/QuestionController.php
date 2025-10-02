@@ -34,6 +34,7 @@ class QuestionController extends Controller
 
         ],[
             'nama.required' => 'Nama tidak boleh kosong',
+            'email.required' => 'Email tidaK boleh kosong',
             'email.email' => 'Email tidak valid',
             'pertanyaan.required' => 'Isi dong pertanyaannya!',
             'pertanyaan.min' => 'Pertanyaan minimal harus 10 karakter'
