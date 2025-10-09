@@ -54,8 +54,8 @@
                         <div class="row">
                             <div class="col-6 collapse-brand">
                                 <a href="./index.html">
-                                    <img class="navbar-brand-dark" src="{{asset ('assets-admin/img/brand/light.svg')}}" alt="Volt logo">
-                                    <img class="navbar-brand-light" src="{{asset ('assets-admin/img/brand/dark.svg')}}" alt="Volt logo">
+                                    <img class="navbar-brand-dark" src="{{ asset('assets-admin/img/brand/light.svg')}}" alt="Volt logo">
+                                    <img class="navbar-brand-light" src="{{ asset('assets-admin/img/brand/dark.svg')}}" alt="Volt logo">
                                 </a>
                             </div>
                             <div class="col-6 collapse-close">
