@@ -60,7 +60,7 @@
             <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
                 <div class="d-flex align-items-center">
                     <div class="avatar-lg me-4">
-                        <img src="{{ asset('assets-admin/img/team/profile-picture-3.jpg')}}" class="card-img-top rounded-circle border-white" alt="Bonnie Green">
+                        <img src="{{ 'assets/img/team/profile-picture-3.jpg')}}" class="card-img-top rounded-circle border-white" alt="Bonnie Green">
                     </div>
                     <div class="d-block">
                         <h2 class="h5 mb-3">Hi, Jane</h2>
@@ -199,7 +199,7 @@
 											<div class="col-auto">
 												<!-- Avatar -->
 												<img alt="Image placeholder"
-													src="../../assets/img/team/profile-picture-1.jpg"
+													src="assets/img/team/profile-picture-1.jpg"
 													class="avatar-md rounded">
 											</div>
 											<div class="col ps-0 ms-2">
@@ -222,7 +222,7 @@
 											<div class="col-auto">
 												<!-- Avatar -->
 												<img alt="Image placeholder"
-													src="../../assets/img/team/profile-picture-2.jpg"
+													src="assets/img/team/profile-picture-2.jpg"
 													class="avatar-md rounded">
 											</div>
 											<div class="col ps-0 ms-2">
