@@ -1,0 +1,16 @@
+.navbar-logo{
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+    object-fit: contain;
+}
+
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
+.font-custom{
+    font-family: 'MyCustomFont';
+}

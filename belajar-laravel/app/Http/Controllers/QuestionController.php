@@ -40,11 +40,17 @@ class QuestionController extends Controller
             'pertanyaan.min' => 'Pertanyaan minimal harus 10 karakter'
         ]);
 
-        $data['nama']       = $request->nama;
-        $data['email']       = $request->email;
-        $data['pertanyaan']       = $request->pertanyaan;
+        $nama     = $request->nama;
+        $email     = $request->email;
+        $pertanyaan      = $request->pertanyaan;
+        return redirect()->back()->with('info', "Terimakasih <strong>$nama!</strong> Pertanyaan : <strong>$pertanyaan</strong>
+        akan segera direspon melalui email <strong>$$email</strong>");
 
-        return view('home-question-respon', $data);
+        // return redirect()->back();
+        
+                // return view('home-question-respon', $data);
+
+
     }
 
     /**
