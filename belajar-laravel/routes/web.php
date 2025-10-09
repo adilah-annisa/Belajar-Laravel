@@ -10,6 +10,8 @@ use App\Http\Controllers\MahasiswaController;
 
 use App\Http\Controllers\PegawaiController;
 
+use App\Http\Controllers\DashboardController;
+
 Route::get('/pegawai', [PegawaiController::class, 'index']);
 
 Route::get('/mahasiswa', function () {
@@ -41,3 +43,5 @@ Route::get('/home', function() {
 Route::post('question/store', [QuestionController::class, 'store'])
 		->name('question.store');
 
+
+Route::get('dashboard', [DashboardController::class, 'index'])->name('userdashb');
