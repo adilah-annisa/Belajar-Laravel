@@ -8,6 +8,10 @@ use App\Http\Controllers\QuestionController;
 
 use App\Http\Controllers\MahasiswaController;
 
+use App\Http\Controllers\PegawaiController;
+
+Route::get('/pegawai', [PegawaiController::class, 'index']);
+
 Route::get('/mahasiswa', function () {
     return 'Halo Mahasiswa PCR! :)';
 });
