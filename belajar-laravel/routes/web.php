@@ -12,6 +12,11 @@ use App\Http\Controllers\PegawaiController;
 
 use App\Http\Controllers\DashboardController;
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
 Route::get('/pegawai', [PegawaiController::class, 'index']);
 
 Route::get('/mahasiswa', function () {
