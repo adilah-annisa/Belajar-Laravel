@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 
 class PegawaiController extends Controller
 {
+    public function index() {
         $tgl_lahir_str = '2006-12-04';
         $tgl_wisuda_str = '2028-10-20';
         $current_semester = 3;
+
+        $birthDate = new \DateTime($tgl_lahir_str);
 
         $today = new \DateTime('today');
         $my_age = $birthDate->diff($today)->y; // Menghitung selisih tahun
@@ -44,4 +47,5 @@ class PegawaiController extends Controller
         ];
 
         return view('pegawai_data', $data);
+}
 }
