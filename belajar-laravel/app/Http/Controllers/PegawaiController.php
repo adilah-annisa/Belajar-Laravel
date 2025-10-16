@@ -11,8 +11,6 @@ class PegawaiController extends Controller
         $tgl_wisuda_str = '2028-10-20';
         $current_semester = 3;
 
-        $birthDate = new \DateTime($tgl_lahir_str);
-
         $today = new \DateTime('today');
         $my_age = $birthDate->diff($today)->y; // Menghitung selisih tahun
         $tgl_harus_wisuda = new \DateTime($tgl_wisuda_str);
