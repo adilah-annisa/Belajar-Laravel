@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pelanggan;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class PelangganController extends Controller
 {
@@ -12,7 +13,7 @@ class PelangganController extends Controller
     public function index()
     {
         $data['dataPelanggan'] = Pelanggan::all();
-        return view('admin.pelanggan.index', $data);
+        return view('layouts.admin.pelanggan.index', $data);
     }
 
     /**
@@ -20,7 +21,7 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        return view('admin.pelanggan.create');
+        return view('layouts.admin.pelanggan.create');
     }
 
     /**
@@ -53,7 +54,7 @@ class PelangganController extends Controller
 
         Pelanggan::create($validasi);
 
-        return redirect()->route('pelanggan.index')->with('success', 'Penambahan Data Berhasil!');
+        return redirect()->route('admin.pelanggan.index')->with('success', 'Penambahan Data Berhasil!');
     }
 
     /**
@@ -71,7 +72,7 @@ class PelangganController extends Controller
     {
         $pelanggan_id = $id;
         $data['dataPelanggan'] = Pelanggan::findOrFail($pelanggan_id);
-        return view('admin.pelanggan.edit', $data);
+        return view('layouts.admin.pelanggan.edit', $data);
     }
 
     /**
@@ -116,6 +117,6 @@ class PelangganController extends Controller
         $pelanggan = Pelanggan::findOrFail($pelanggan_id);
 
         $pelanggan->delete();
-        return redirect()->route('pelanggan.index')->with('success','Data Berhasil Dihapus!');
+        return redirect()->route('admin.pelanggan.index')->with('success','Data Berhasil Dihapus!');
     }
 }

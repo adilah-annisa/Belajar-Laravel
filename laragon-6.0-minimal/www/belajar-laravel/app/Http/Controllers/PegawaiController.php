@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Routing\Controller;
+use App\Models\Pegawai;
 use Illuminate\Http\Request;
 
 class PegawaiController extends Controller

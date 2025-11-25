@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -15,7 +16,7 @@ class UserController extends Controller
     public function index()
     {
         $data['dataUser'] = User::all();
-        return view('admin.user.index', $data);
+        return view('layouts.admin.user.index', $data);
     }
 
     /**
@@ -23,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.user.create');
+        return view('layouts.admin.user.create');
     }
 
     /**

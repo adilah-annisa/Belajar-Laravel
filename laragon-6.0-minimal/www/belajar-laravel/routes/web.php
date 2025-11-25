@@ -50,6 +50,7 @@ Route::get('/home', function() {
 Route::post('question/store', [QuestionController::class, 'store'])
 		->name('question.store');
 
+Route::resource('user', UserController::class);
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
