@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\Controller;
 
 
 class UserController extends Controller
@@ -15,8 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $data['dataUser'] = User::all();
-        return view('layouts.admin.user.index', $data);
+        $dataUser = User::all();
+        return view('layouts.admin.user.index', compact('dataUser'));
     }
 
     /**
@@ -24,8 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('layouts.admin.user.create');
-    }
+        return view('layouts.admin.user.create');    }
 
     /**
      * Store a newly created resource in storage.
@@ -85,7 +84,6 @@ class UserController extends Controller
     }
 
     $user->update($data);
-
     return redirect()->route('user.index')->with('success', 'User berhasil diperbarui!');
 }
 

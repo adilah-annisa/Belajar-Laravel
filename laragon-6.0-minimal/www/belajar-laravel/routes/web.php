@@ -59,5 +59,5 @@ Route::resource('pelanggan', PelangganController::class);
 
 Route::resource('user', UserController::class);
 
-Route::get('/multipleuploads', 'MultipleuploadsController@index')->name('uploads');
-Route::post('/save','MultipleuploadsController@store')->name('uploads.store');
+// Route::get('/multipleuploads', 'MultipleuploadsController@index')->name('uploads');
+// Route::post('/save','MultipleuploadsController@store')->name('uploads.store');

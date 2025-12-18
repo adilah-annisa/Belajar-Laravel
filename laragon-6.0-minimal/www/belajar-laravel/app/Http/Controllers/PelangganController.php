@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Pelanggan;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Controller;
 
 class PelangganController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    // app/Http/Controllers/PelangganController.php
 
     public function index(Request $request)
     {
@@ -41,11 +40,6 @@ class PelangganController extends Controller
         // 5. Kirim data ke View
         $data['dataPelanggan'] = $dataPelanggan;
         return view('layouts.admin.pelanggan.index', $data);
-
-        $filterableColumns = ['gender'];
-
-        $pageData = ['dataPelanggan'] = Pelanggan::filter($request, $filterableColumns)->paginate(10);
-        return view('layouts.admin.pelanggan.index', $pageData);
     }
     /**
      * Show the form for creating a new resource.

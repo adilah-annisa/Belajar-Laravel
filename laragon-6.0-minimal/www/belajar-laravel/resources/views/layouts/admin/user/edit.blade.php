@@ -21,7 +21,7 @@
                     <p class="mb-0">Form untuk mengedit data user.</p>
                 </div>
                 <div>
-                    <a href="" class="btn btn-primary"><i class="far fa-question-circle me-1"></i> Kembali</a>
+                    <a href="{{ route('user.index') }}" class="btn btn-primary"><i class="far fa-question-circle me-1"></i> Kembali</a>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                             </div>
                         @endif
 
-                        <form action="{{ route('user.update', $dataUser->id) }}" method="POST">
+                        <form action="{{ route('user.update', $user->id) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="row mb-4">
@@ -53,20 +53,20 @@
                                     <!-- Name -->
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Name</label>
-                                        <input value="{{ $dataUser->name }}" type="text" id="name" name="name" class="form-control" required>
+                                        <input value="{{ $user->name }}" type="text" id="name" name="name" class="form-control" required>
                                     </div>
 
                                 <div class="col-lg-4 col-sm-12">
                                 <!-- Email -->
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input value="{{ $dataUser->email }}" type="text" id="email" name="email" class="form-control" required>
+                                    <input value="{{ $user->email }}" type="text" id="email" name="email" class="form-control" required>
                                 </div>
 
                                 <!-- Password -->
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
-                                    <input value="{{ $dataUser->password }}" type="text" id="password" name="password" class="form-control">
+                                    <input value="{{ $user->password }}" type="text" id="password" name="password" class="form-control">
                                 </div>
 
                                 <!-- Buttons -->

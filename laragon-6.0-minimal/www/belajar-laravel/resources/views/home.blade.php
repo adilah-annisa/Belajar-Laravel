@@ -19,6 +19,13 @@
         .navbar {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .navbar-logo {
+            height: 40px;
+            width: auto;
+            object-fit: contain
+        }
+
         .hero-section {
             background-color: #3E97FF;
             color: white;
@@ -49,7 +56,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <img src="{{ asset('assets/images/LOGO GARUDA.jpg') }}" alt="logo" class="navbar-logo">
+            <img src="{{ asset('assets/images/LOGO GARUDA.jpg') }}" alt="logo" class="navbar-logo me-2">
             <a class="navbar-brand" href="#" >My App</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

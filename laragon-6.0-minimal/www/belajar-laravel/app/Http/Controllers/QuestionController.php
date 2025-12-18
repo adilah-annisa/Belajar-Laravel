@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class QuestionController extends Controller
 {
@@ -44,11 +45,11 @@ class QuestionController extends Controller
         $email     = $request->email;
         $pertanyaan      = $request->pertanyaan;
         return redirect()->back()->with('info', "Terimakasih <strong>$nama!</strong> Pertanyaan : <strong>$pertanyaan</strong>
-        akan segera direspon melalui email <strong>$$email</strong>");
+        akan segera direspon melalui email <strong>$email</strong>");
 
-        // return redirect()->back();
-        
-                // return view('home-question-respon', $data);
+        return redirect()->back();
+
+        return view('home-question-respon', $data);
 
 
     }

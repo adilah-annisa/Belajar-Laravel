@@ -1,4 +1,4 @@
-@extends('layouts.admin.app')
+@extends('layouts.admin.user.template')
 @section('title', 'List User')
 @section('content')
 
